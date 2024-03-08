@@ -1,46 +1,51 @@
 import React, { useState } from 'react'
 
 const Register = () => {
+   const [userData,setUserData]=useState({name:"",email:"",password:"",ConfirmPassword:""});
+ console.log(userData,"userData")
 
-  const[UserData,setUserData] = useState({name:"",email:"",password:"",ConfirmPassword:""})
-  console.log(UserData, "userData")
+   function hendleChange(event){
+      setUserData({...userData,[event.target.name]:event.target.value})
 
-  function hendalchange(event){
-      setUserData({...UserData,[event.target.name]:event.target.value})
-  }
+   }
 
-  function handlesubmit(event){
-    event.preventDefault();
-         if(UserData.name && UserData.email && UserData.password &&  UserData.ConfirmPassword){
-               
-          if(UserData.password === UserData.ConfirmPassword){
-             
-            alert("Registeration is Successfual")
-          }else{
-              alert("password and consfirm are not matched")
-          }
-
+   function handleSubmit(event){
+       event.preventDefault();
+       if(userData.name && userData.email && userData.password && userData.ConfirmPassword){
+         
+         if(userData.password === userData.ConfirmPassword){
+     
+            alert("Registeration Successfual")
          }else{
-            alert("All fildes are requared")
+            alert("password and confirmePassword are not matched")
          }
-  }
- return (
+
+
+
+       }else{
+           alert("all fildes are requared")
+       }
+   }
+
+
+  return (
     <div>
-       <h1>Register</h1>
-       <form onSubmit={handlesubmit}>
-       <label>Name</label><br/>
-          <input type="text"  onChange={hendalchange} name="name" /><br/>
-          <label>Email</label><br/>
-          <input type="email" onChange={hendalchange}  name="email" /><br/>
-          <label>Password</label><br/>
-          <input type="password" onChange={hendalchange}  name="password" /><br/>
-          <label>ConfirmPassword</label><br/>
-          <input type="password" onChange={hendalchange}  name="ConfirmPassword" /><br/>
-          <input type="submit" value="Register"/><br/>
+        <h1>Register From</h1>
+
+        <form onSubmit={handleSubmit}>
+        <label>Name</label><br/>
+        <input type="text" onChange={hendleChange} name="name"/><br/>
+        <label>Email</label><br/>
+        <input type="email" onChange={hendleChange} name="email"/><br/>
+        <label>Password</label><br/>
+        <input type="password" onChange={hendleChange} name="password"/><br/>
+        <label>ConfirmPassword</label><br/>
+        <input type="password" onChange={hendleChange} name="ConfirmPassword"/><br/>
+        <input type="submit" value="Register_Form"/><br/>
+        
+        </form>
       
-       </form>
     </div>
-    
   )
 }
 

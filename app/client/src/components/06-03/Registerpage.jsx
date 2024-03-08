@@ -43,7 +43,7 @@ const router= useNavigate()
               <label>password</label><br/>
               <input type='password' onChange={handleChange} name="password" /><br/>
 
-              <label>Confirmpassword</label><br/>
+              <label>ConfirmPassword</label><br/>
               <input type="password" onChange={handleChange} name="ConfirmPassword" /><br/>
 
               <input type='submit' value="Register"/>
