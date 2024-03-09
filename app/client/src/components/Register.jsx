@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 
+import toast from 'react-hot-toast'
 const Register = () => {
    const [userData,setUserData]=useState({name:"",email:"",password:"",ConfirmPassword:""});
  console.log(userData,"userData")
@@ -15,15 +16,15 @@ const Register = () => {
          
          if(userData.password === userData.ConfirmPassword){
      
-            alert("Registeration Successfual")
+          toast.success("Registeration Successfual")
          }else{
-            alert("password and confirmePassword are not matched")
+          toast.error("Password & ConfirmePassword Not Matched")
          }
 
 
 
        }else{
-           alert("all fildes are requared")
+        toast.error("All Fildes Are Requared")
        }
    }
 

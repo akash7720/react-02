@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import toast from 'react-hot-toast'
 
 const Login = () => {
 
@@ -13,9 +14,9 @@ async function handleSubmit(event){
   event.preventDefault();
      if(userlogin.email && userlogin.password){
 
-        alert("Login Successful")
+        toast.success("Login Successful")
      }else{
-        alert("all Fildes are requared")
+        toast.error("all Fildes are requared")
      }
 }
 
