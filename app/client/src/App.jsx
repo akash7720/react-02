@@ -12,10 +12,22 @@ import EffectThree from './components/03-03/EffectThree';
 import Effectfour from './components/03-03/Effectfour';
 import Registerpage from './components/06-03/Registerpage';
 import Test from './components/Test';
+import UseReducer from './components/09-03/UseReducer';
+import { Children, useState } from 'react';
+import PropsDrilling from './components/09-03/PropsDrilling';
+import ProviderCounterContext from './components/Context/ProviderCounterContext';
+import FackAllProducts from './components/10-03/FackAllProducts';
+import AuthContext from './components/Context/AuthContext';
+
 
 
 
 function App() {
+  const [students] = useState(["a", 'b', 'c', 'd'])
+  const [counter] = useState(1234)
+  const[age]=useState(65)
+  
+
   return (
     <div className="App">
     <Routes>
@@ -30,6 +42,12 @@ function App() {
     <Route path='/Wellcome' element={<Wellcome/>} />
     <Route path='/Registerpage' element={<Registerpage/>} />
     <Route path='/Test' element={<Test/>} />
+    <Route path='/useReducer' element={<UseReducer/>} />
+    <Route path='/Children' element={<Children/>} />
+    <Route path='/PropsDrilling' element={<PropsDrilling  students={students} counter={counter}  age={age}/>}  />
+    <Route path='/ProviderCounterContext' element={<ProviderCounterContext/>}  />
+    <Route path='/FackAllProducts' element={<FackAllProducts/>}  />
+    <Route path='/AuthContext' element={<AuthContext/>}  />
     
     </Routes>
       

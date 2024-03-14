@@ -4,7 +4,7 @@ import { useState } from "react"
 
 
 function Counter(){
-    const initalPrice=1000
+    const initalPrice=10 
     const [Counter ,setCounter] = useState(0)
     const [price,setPrice] = useState(initalPrice);
 
