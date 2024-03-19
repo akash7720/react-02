@@ -1,9 +1,15 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import toast from 'react-hot-toast'
-import {useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import { AuthContext } from './Context/AuthContext'
+
+
 
 const Login = () => {
+ 
+  const{LOGIN}=useContext(AuthContext)
   const router= useNavigate()
+
   const[userlogin , setuserLogin] = useState({email:"",password:""})
   console.log(userlogin,"userlogin")
 
@@ -16,8 +22,10 @@ function handleChange(event){
     event.preventDefault();
     if( userlogin.email && userlogin.password ){
       try{
-        const response={data:{success:true,massage:"Login successfual"}}
+        const response={data:{success:true,massage:"Login successfual",userData:{name:"AKASH@",email:"akash@gmail.com"} ,tokan:"ak312skyUHusb"}}
         if(response.data.success){
+          LOGIN(response.data.userData)
+           localStorage.setItem("tokan" ,JSON.stringify(response.data.tokan))
                 toast.success(response.data.massage)
                 setuserLogin({ email:"",password:""})
               router('/')

@@ -18,6 +18,8 @@ import PropsDrilling from './components/09-03/PropsDrilling';
 import ProviderCounterContext from './components/Context/ProviderCounterContext';
 import FackAllProducts from './components/10-03/FackAllProducts';
 import AuthContext from './components/Context/AuthContext';
+import Todo from './components/15-03/Todo';
+import Themes from './components/16-03/Themes';
 
 
 
@@ -48,6 +50,8 @@ function App() {
     <Route path='/ProviderCounterContext' element={<ProviderCounterContext/>}  />
     <Route path='/FackAllProducts' element={<FackAllProducts/>}  />
     <Route path='/AuthContext' element={<AuthContext/>}  />
+    <Route path='/Todo' element={<Todo/>}  />
+    <Route path='/Themes' element={<Themes/>}  />
     
     </Routes>
       

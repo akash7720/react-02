@@ -1,31 +1,30 @@
 
+
 import React, { createContext, useState } from 'react'
 
-export const MyCounterContext=createContext();
+export const MycounterContext=createContext();
 
 const ProviderCounterContext = ({children}) => {
-    const[counter , setCounter] =useState(0)
-    function Increment(){
-        setCounter(counter + 10)
-    }
-    function Decrement() {
-              setCounter(counter - 10)
-          }
-          function Reset() {
-              setCounter(0)
-          }
+  const [counter, setCounter] = useState(0);
+       function Increment(){
+           setCounter(counter + 1)
+       }
+        function Decrement(){
+               setCounter(counter - 1)
+        }
+
+        function Reset(){
+          setCounter(0)
+        }
+
   return (
     <div>
-         <MyCounterContext.Provider value={{counter,Increment, Decrement,Reset}}>
-              {children}
-         </MyCounterContext.Provider>
-         
+      <MycounterContext.Provider value={{counter,Increment,Decrement,Reset}}>
+           {children}
+      </MycounterContext.Provider>
     </div>
   )
 }
 
 export default ProviderCounterContext
-
-
-
 
