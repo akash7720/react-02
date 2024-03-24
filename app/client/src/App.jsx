@@ -20,6 +20,18 @@ import FackAllProducts from './components/10-03/FackAllProducts';
 import AuthContext from './components/Context/AuthContext';
 import Todo from './components/15-03/Todo';
 import Themes from './components/16-03/Themes';
+import Navbar from './components/Navbar';
+import NoPage from './components/NoPage';
+import CurrencyConverter from './components/CurrencyProject/CurrencyConverter';
+import Them from './components/16-03/Them';
+import CounterRedux from './components/20-03/CounterRedux';
+import UseMemo from './components/22-03/UseMemo';
+import UseCallback from './components/23-03/UseCallBack';
+import ChildComponentJsx from './components/23-03/ChildComponent.jsx';
+
+
+
+
 
 
 
@@ -31,8 +43,11 @@ function App() {
   
 
   return (
+   
     <div className="App">
+       <Navbar/>
     <Routes>
+      <Route path='*' element={<NoPage/>} />
     <Route path='/' element={<Home/>} />
     <Route path='/Login' element={<Login/>} />
     <Route path='/Register' element={<Register/>} />
@@ -52,7 +67,13 @@ function App() {
     <Route path='/AuthContext' element={<AuthContext/>}  />
     <Route path='/Todo' element={<Todo/>}  />
     <Route path='/Themes' element={<Themes/>}  />
-    
+    <Route path='/Them' element={< Them/>}/>
+    <Route path='/CurrencyConverter' element={<CurrencyConverter/>}/>
+    <Route path='/CounterRedux' element={<CounterRedux/>}/>
+    <Route path='/UseMemo' element={<UseMemo/>}/>
+    <Route path='/UseCallback' element={<UseCallback/>}/>
+    <Route path='/ChildComponent' element={<ChildComponentJsx/>}/>
+
     </Routes>
       
     </div>
@@ -60,3 +81,5 @@ function App() {
 }
 
 export default App;
+
+

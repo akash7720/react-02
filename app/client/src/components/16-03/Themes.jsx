@@ -1,53 +1,47 @@
-// import React from 'react'
-
-import { useReducer } from "react";
-
-// const Themes = () => {
-//   return (
-//     <div>Themes</div>
-//   )
-// }
-
-// export default Themes
+import { createContext, useReducer } from "react";
 
 
-export const ThemeContext= createContext();
- function Reducer(state,action){
-      switch (action.type) {
-        case "DARK":
-              return {...state,user:action.payload}
-         case "LIGHT":     
-               return {...state,user:null}
-        default:
-          return  state ;
-      }
- }
+export const ThemeContext=createContext()
 
- const InitionalState={user:null}
+ const ThemeData={
+    dark:{
+            background:"#000000",
+            color:"rgb(194,231,255)",
+            height:"600px",
+        },
+        light:{
+            color:"rgb(0,29,53)",
+            // background:"rgb(194,231,255)",
+            height:"600px",
+        },
+};
 
-const Themes=( {children})=>{
-   
-
-  const[state,dispatch]=useReducer(Reducer,InitionalState)
-
-  function DarK(data){
-      dispatch({type:"DARK" ,payload:data})
-  }
-   function Light(){
-    dispatch({type:"LIGHT" })
-   }
-   
-
-
-
-     return(
-         <AuthContext.Provider  value={{state,DarK,Light}}>
-                {children}
-         </AuthContext.Provider>
-
-     )
-
-    
+const Reducer=(state,action)=>{
+    switch(action.type){
+        case "Dark":
+            return ThemeData.dark
+        case "Light":
+            return ThemeData.light   
+    }
 }
 
-export default Themes;
+const initialState=ThemeData.light
+const ThemeContextcomponent=({children})=>{
+  const [state,dispatch]=useReducer(Reducer,initialState)
+
+  function dark(){
+   dispatch({type:"Dark"})
+  }
+
+  function light(){
+   dispatch({type:"Light"})
+  }
+   return(
+       <ThemeContext.Provider value={{state,dark,light}} >
+           {children}
+       </ThemeContext.Provider>
+   )
+}
+
+export default ThemeContextcomponent
+
