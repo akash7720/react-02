@@ -5,7 +5,6 @@
     justify-content: space-around;
     font-weight: bolder;
     font-size: 20px;
-    border-bottom: 2px solid rgb(184, 182, 182);
 }
 .nav-1>div{
     /* border: 5px solid green; */
@@ -15,4 +14,10 @@
     /* border: 5px solid blue; */
     display: flex;
     justify-content: space-around;
+}
+.nav-1>:nth-child(2)>:hover{
+    color: gray;
+}
+.nav-1>:nth-child(3)>:hover{
+    color: gray;
 }
