@@ -1,7 +1,11 @@
 import React, { useState } from 'react'
 
 import toast from 'react-hot-toast'
+import { useNavigate } from 'react-router-dom';
+
+
 const Register = () => {
+  const router= useNavigate()
    const [userData,setUserData]=useState({name:"",email:"",password:"",ConfirmPassword:""});
  console.log(userData,"userData")
 
@@ -17,6 +21,7 @@ const Register = () => {
          if(userData.password === userData.ConfirmPassword){
      
           toast.success("Registeration Successfual")
+          router('/Login')
          }else{
           toast.error("Password & ConfirmePassword Not Matched")
          }
