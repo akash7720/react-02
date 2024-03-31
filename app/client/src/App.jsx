@@ -28,6 +28,10 @@ import CounterRedux from './components/20-03/CounterRedux';
 import UseMemo from './components/22-03/UseMemo';
 import UseCallback from './components/23-03/UseCallBack';
 import ChildComponentJsx from './components/23-03/ChildComponent.jsx';
+import ThemeRedux from './components/ThemeRedux.jsx';
+import SpotifySearch from './components/RapidApiProjects/SpotifySearch.js';
+import FakeStoreSingleProducts from './components/10-03/FakeStoreSingleProducts.jsx';
+
 
 
 
@@ -46,6 +50,7 @@ function App() {
    
     <div className="App">
        <Navbar/>
+       
     <Routes>
       <Route path='*' element={<NoPage/>} />
     <Route path='/' element={<Home/>} />
@@ -64,6 +69,7 @@ function App() {
     <Route path='/PropsDrilling' element={<PropsDrilling  students={students} counter={counter}  age={age}/>}  />
     <Route path='/ProviderCounterContext' element={<ProviderCounterContext/>}  />
     <Route path='/FackAllProducts' element={<FackAllProducts/>}  />
+    <Route path='/FakeStoreSingleProducts' element={<FakeStoreSingleProducts/>}  />
     <Route path='/AuthContext' element={<AuthContext/>}  />
     <Route path='/Todo' element={<Todo/>}  />
     <Route path='/Themes' element={<Themes/>}  />
@@ -73,7 +79,9 @@ function App() {
     <Route path='/UseMemo' element={<UseMemo/>}/>
     <Route path='/UseCallback' element={<UseCallback/>}/>
     <Route path='/ChildComponent' element={<ChildComponentJsx/>}/>
-
+    <Route path='/ThemeRedux' element={<ThemeRedux/>}/>
+    <Route path='/SpotifySearch' element={<SpotifySearch/>}/>
+    
     </Routes>
       
     </div>

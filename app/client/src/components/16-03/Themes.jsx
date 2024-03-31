@@ -21,11 +21,14 @@ const Reducer=(state,action)=>{
         case "Dark":
             return ThemeData.dark
         case "Light":
-            return ThemeData.light   
+            return ThemeData.light 
+            default :
+                return state  
     }
 }
 
 const initialState=ThemeData.light
+
 const ThemeContextcomponent=({children})=>{
   const [state,dispatch]=useReducer(Reducer,initialState)
 

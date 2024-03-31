@@ -8,6 +8,7 @@ const Them= () => {
   return (
     <div style={state}>
       <h1>Theme Change</h1>
+      {/* <h4>REDUX ...</h4> */}
       <button onClick={()=>light()}>Light</button>
       <button onClick={()=>dark()}>Dark</button>
     </div>
