@@ -5,6 +5,7 @@ import '../RapidApiProjects/Spotify.css'
 const SpotifySearch = () => {
   const [query, setQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
+  
   console.log(searchResults, "searchResults")
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);

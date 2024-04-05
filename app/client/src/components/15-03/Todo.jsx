@@ -4,8 +4,8 @@ const Todo = () => {
     const [todo, setTodo] = useState("");
     const [todos, setTodos] = useState([]);
 
-    console.log(todo, "todo")
-    console.log(todos, "todos")
+    // console.log(todo, "todo")
+    // console.log(todos, "todos")
 
     function HandleChange(event) {
         setTodo(event.target.value)
@@ -31,13 +31,16 @@ const Todo = () => {
     return (
         <div>
             <h3>Add Todo</h3>
+
             <input value={todo} onChange={HandleChange} type='text' placeholder='Do Lunch..' />
             <button onClick={HandleSubmit}>Submit</button>
+
              {todos.length ? <div>
               <h2>Your Todos :</h2> 
                   {todos.map((todo, i) => (
                <p key={i}>
                 {i+ 1}.{todo}
+                
                 <button onClick={() => HandleDelete(i)}>Delete</button></p>
                 ))}
                 

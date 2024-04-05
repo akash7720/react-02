@@ -33,6 +33,7 @@ const FakeStoreAllProducts = () => {
 
   function handleChange(event) {
     console.log(event.target.value);
+
     setSearch(event.target.value);
 
     let userword = event.target.value.toLowerCase();
@@ -58,6 +59,7 @@ const FakeStoreAllProducts = () => {
         <h2>Search Product:</h2>
         <input placeholder="Mens.." value={search} onChange={handleChange} />
       </div>
+      
       {filterProducts?.length ? (
         <div
           style={{

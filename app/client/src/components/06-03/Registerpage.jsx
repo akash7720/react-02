@@ -21,7 +21,7 @@ const router= useNavigate()
           // const response = await axios.post("http://localhost:8080/login",{userData})
           
           try{
-            const response={data:{success:true,massage:"registeration successfual"}}
+            const response={data:{success:true,massage:"registeration successfuall"}}
             if(response.data.success){
                     toast.success(response.data.massage)
                   setUserData({name:"", email:"",password:"", ConfirmPassword:""})

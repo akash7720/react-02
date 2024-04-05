@@ -31,6 +31,7 @@ import ChildComponentJsx from './components/23-03/ChildComponent.jsx';
 import ThemeRedux from './components/ThemeRedux.jsx';
 import SpotifySearch from './components/RapidApiProjects/SpotifySearch.js';
 import FakeStoreSingleProducts from './components/10-03/FakeStoreSingleProducts.jsx';
+import Moves from './components/RapidApiProjects/Moves.jsx';
 
 
 
@@ -81,6 +82,8 @@ function App() {
     <Route path='/ChildComponent' element={<ChildComponentJsx/>}/>
     <Route path='/ThemeRedux' element={<ThemeRedux/>}/>
     <Route path='/SpotifySearch' element={<SpotifySearch/>}/>
+    <Route path='/Moves' element={<Moves/>}/>
+    
     
     </Routes>
       

@@ -20,7 +20,7 @@ const Register = () => {
          
          if(userData.password === userData.ConfirmPassword){
      
-          toast.success("Registeration Successfual")
+          toast.success("Registeration Successfuall")
           router('/Login')
          }else{
           toast.error("Password & ConfirmePassword Not Matched")
