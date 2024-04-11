@@ -31,7 +31,7 @@ import ChildComponentJsx from './components/23-03/ChildComponent.jsx';
 import ThemeRedux from './components/ThemeRedux.jsx';
 import SpotifySearch from './components/RapidApiProjects/SpotifySearch.js';
 import FakeStoreSingleProducts from './components/10-03/FakeStoreSingleProducts.jsx';
-import Moves from './components/RapidApiProjects/Moves.jsx';
+
 
 
 
@@ -56,21 +56,21 @@ function App() {
       <Route path='*' element={<NoPage/>} />
     <Route path='/' element={<Home/>} />
     <Route path='/Login' element={<Login/>} />
-    <Route path='/Register' element={<Register/>} />
+    <Route path='/Registerpage' element={<Register/>} />
     <Route path='/counter' element={<Counter/>} />
     <Route path='/Effect-1' element={<Effectone/>} />
     <Route path='/Effect-2' element={<EffectTwo/>} />
     <Route path='/Effect-3' element={<EffectThree/>} />
     <Route path='/Effect-4' element={<Effectfour/>} />
     <Route path='/Wellcome' element={<Wellcome/>} />
-    <Route path='/Registerpage' element={<Registerpage/>} />
+    <Route path='/Register' element={<Registerpage/>} />
     <Route path='/Test' element={<Test/>} />
     <Route path='/useReducer' element={<UseReducer/>} />
     <Route path='/Children' element={<Children/>} />
     <Route path='/PropsDrilling' element={<PropsDrilling  students={students} counter={counter}  age={age}/>}  />
     <Route path='/ProviderCounterContext' element={<ProviderCounterContext/>}  />
-    <Route path='/FackAllProducts' element={<FackAllProducts/>}  />
-    <Route path='/FakeStoreSingleProducts' element={<FakeStoreSingleProducts/>}  />
+    <Route path='/AllProducts' element={<FackAllProducts/>}  />
+    <Route path='/StoreSingleProducts' element={<FakeStoreSingleProducts/>}  />
     <Route path='/AuthContext' element={<AuthContext/>}  />
     <Route path='/Todo' element={<Todo/>}  />
     <Route path='/Themes' element={<Themes/>}  />
@@ -82,7 +82,7 @@ function App() {
     <Route path='/ChildComponent' element={<ChildComponentJsx/>}/>
     <Route path='/ThemeRedux' element={<ThemeRedux/>}/>
     <Route path='/SpotifySearch' element={<SpotifySearch/>}/>
-    <Route path='/Moves' element={<Moves/>}/>
+   
     
     
     </Routes>
