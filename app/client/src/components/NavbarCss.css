@@ -10,11 +10,13 @@
 .nav-1>div{
     /* border: 5px solid green; */
     width: 30%;
+    display: flex;
+    justify-content: space-around;
     
 }
-.nav-1>:nth-child(1){
-    margin-top: 15px;
-}
+/* .nav-1>:nth-child(1){
+    /* margin-top: 15px; */
+
 .nav-1>:nth-child(3){
     /* border: 5px solid blue; */
     display: flex;
@@ -25,4 +27,7 @@
 }
 .nav-1>:nth-child(3)>:hover{
     color: gray;
+
+
+   
 }
