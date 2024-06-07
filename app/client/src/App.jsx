@@ -36,6 +36,7 @@ import AllProducts from './components/AllProducts.jsx';
 import Seller from './components/project/Seller.jsx';
 import Buyer from './components/project/Buyer.jsx';
 import YourProducts from './components/project/YourProducts.jsx';
+import Cart from './components/Cart.jsx';
 
 
 
@@ -139,7 +140,8 @@ function App() {
     <Route path='/add-product' element={<AddProduct/>}/>   
     <Route path='/seller' element={<Seller/>}/>  
     <Route path='/buyer' element={<Buyer/>}/>  
-    <Route path='/Your-Products' element={<YourProducts/>}/>  
+    <Route path='/Your-Products' element={<YourProducts/>}/> 
+    <Route path='/Add-To-Cart' element={<Cart/>}/> 
     </Routes>
       
     </div>
