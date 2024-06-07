@@ -48,6 +48,7 @@ const Navbar = () => {
 
       <div>
         <p onClick={() => router('/Add-To-Cart')}>Cart</p>
+        
         <p onClick={() => router('/Register')}>Register</p>
         {/* <p onClick={() => router('/Login')}>Login</p> */}
         {state?.user?.role ? (
