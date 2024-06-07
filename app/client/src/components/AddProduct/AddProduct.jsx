@@ -119,7 +119,7 @@ return (
       <br />
       <input required name="tags" onChange={handleChange} />
       <br />
-      <label>Image</label>
+      <label>Image</label> <br />
       <input required name="image" onChange={handleChange} />
       <br />
       <input type="submit" />
