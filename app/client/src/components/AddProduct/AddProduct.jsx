@@ -70,6 +70,7 @@ const [productData, setProductData] = useState({
   price: "",
   quantity: "",
   tags: "",
+  image:""
 });
 
 console.log(productData, "productData");
@@ -117,6 +118,8 @@ return (
       <label>Product Tags</label>
       <br />
       <input required name="tags" onChange={handleChange} />
+      <br />
+      <input required name="image" onChange={handleChange} />
       <br />
       <input type="submit" />
       <br />
