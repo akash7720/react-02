@@ -48,7 +48,7 @@ if (response?.data?.success){
                   }}
                 >
                   <h1>Name : {productObj.name}</h1>
-                  <p>image:-{productObj.image}</p>
+                  {/* <p>image:-{productObj.image}</p> */}
                   <p>Category : {productObj.category}</p>
                   <p>Price : {productObj.price}/-</p>
                   <p>Total Quantities : {productObj.quantity}</p>

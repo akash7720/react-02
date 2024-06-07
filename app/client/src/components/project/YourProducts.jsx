@@ -35,7 +35,7 @@ const YourProducts = () => {
            <div style={{width :"15%" , border:"2px solid black" , marginBottom:"5%", height:"250px"}}> 
                {/* <img style={{height:"54%" , width:"100%"}} src={productObj.image} /> */}
                <h2>Name :- {productObj.name}</h2>
-               <p>image:-{productObj.image}</p>
+               {/* <p>image:-{productObj.image}</p> */}
               <p>Category :- {productObj.category}</p>
               <p>Price :- {productObj.price}/-</p>
               <p>Total Quantities :- {productObj.quantity}</p>
