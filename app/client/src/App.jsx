@@ -114,7 +114,6 @@ function App() {
     <Route path='/ProviderCounterContext' element={<ProviderCounterContext/>}  />
     <Route path='/All-Products' element={<FackAllProducts/>}  />
     <Route path='/StoreSingleProducts' element={<FakeStoreSingleProducts/>}  />
-    <Route path='/AuthContext' element={<AuthContext/>}  />
     <Route path='/Todo' element={<Todo/>}  />
     <Route path='/Themes' element={<Themes/>}  />
     <Route path='/Them' element={< Them/>}/>
@@ -129,13 +128,14 @@ function App() {
    
     
 
+  
 
-
-
+  
     <Route path='*' element={<NoPage/>} />
     <Route path='/' element={<Home/>} />
     <Route path='/Register' element={<Registerpage/>} />
     <Route path='/Login' element={<Login/>} />
+    <Route path='/AuthContext' element={<AuthContext/>}  />
     <Route path='/AllProducts' element={<AllProducts awdiz={products }/>}/>
     <Route path='/add-product' element={<AddProduct/>}/>   
     <Route path='/seller' element={<Seller/>}/>  
