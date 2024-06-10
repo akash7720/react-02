@@ -1,7 +1,7 @@
 
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import api from "../../AxiosConfig";
+import api from "../AxiosConfig";
 
 const AllProducts = (props) => {
   const { awdiz } = props;
