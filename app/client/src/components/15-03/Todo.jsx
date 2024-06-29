@@ -4,8 +4,8 @@ const Todo = () => {
     const [todo, setTodo] = useState("");
     const [todos, setTodos] = useState([]);
 
-    // console.log(todo, "todo")
-    // console.log(todos, "todos")
+    console.log(todo, "todo")
+    console.log(todos, "todos")
 
     function HandleChange(event) {
         setTodo(event.target.value)
