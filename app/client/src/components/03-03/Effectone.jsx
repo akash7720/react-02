@@ -1,3 +1,4 @@
+import { all } from 'axios'
 import React, { useEffect, useState } from 'react'
 
 const Effectone = () => {
@@ -6,7 +7,8 @@ const Effectone = () => {
    const[counter2,setCounter2]=useState(20)
 
    useEffect(()=>{
-      console.log("from useEffct 1")
+      // console.log("from useEffct 1")
+     alert("hello")
    })
   return (
     <div>

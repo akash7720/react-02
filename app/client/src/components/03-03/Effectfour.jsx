@@ -5,7 +5,8 @@ const Effectfour = () => {
     const[counter2,setcounter2]=useState(20)
 
     useEffect(()=>{
-        console.log("from useEffect")
+        // console.log("from useEffect")
+        alert("hello")
 
     },[counter1 , counter2])
     
